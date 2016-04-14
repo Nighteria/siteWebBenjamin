@@ -1,0 +1,4 @@
+services:
+#    be_naccueil.example:
+#        class: BEN\accueilBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
