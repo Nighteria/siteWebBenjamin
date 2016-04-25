@@ -100,18 +100,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // be_naccueil_homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'be_naccueil_homepage');
-            }
-
-            return array (  '_controller' => 'BEN\\accueilBundle\\Controller\\DefaultController::indexAction',  '_route' => 'be_naccueil_homepage',);
-        }
-
         // hello_the_world
         if ($pathinfo === '/hello-world') {
-            return array (  '_controller' => 'BENaccueilBundle:Advert:index',  '_route' => 'hello_the_world',);
+            return array (  '_controller' => 'BEN\\accueilBundle\\Controller\\AdvertController::indexAction',  '_route' => 'hello_the_world',);
         }
 
         // homepage
